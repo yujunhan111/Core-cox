@@ -26,7 +26,7 @@ age, sex, biomarker_1, disease_a_event, disease_a_time, disease_b_event, disease
 ```python
 import pandas as pd
 
-from MTL_COX import LRMTLCoxModel, LRTransferRTCoxModel, prepare_mtl_data
+from corecox import CoreCoxModel, SourceCoxModel, prepare_survival_data
 
 source_df = pd.read_csv("source.csv")
 target_df = pd.read_csv("target.csv")
@@ -36,13 +36,13 @@ diseases = {
     "disease_b_event": "disease_b_time",
 }
 
-source_data, target_data = prepare_mtl_data(
+source_data, target_data = prepare_survival_data(
     source_df,
     target_df,
     diseases,
 )
 
-source_model = LRMTLCoxModel(
+source_model = SourceCoxModel(
     rank=2,
     lambda_rank=0.01,
     max_iter=300,
@@ -51,7 +51,7 @@ source_model = LRMTLCoxModel(
 )
 source_model.fit(source_data)
 
-model = LRTransferRTCoxModel(
+model = CoreCoxModel(
     source_lr_model=source_model,
     lambda_theta=0.01,
     optimization_method="lbfgs",
