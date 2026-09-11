@@ -43,15 +43,11 @@ $$
 
 \(U\) contains shared predictor patterns, \(V\) contains outcome-specific loadings, and an \(L_2\) penalty on \(\Theta\) controls target-cohort deviation.
 
-```mermaid
-flowchart LR
-    A[Large source cohort] --> B[Low-rank multi-task Cox]
-    B --> C[Source coefficients]
-    C --> D[Residual transfer]
-    E[Small target cohort] --> D
-    D --> F[Target coefficients]
-    F --> G[Outcome-specific risk scores]
-```
+<p align="center">
+  <img src="assets/corecox_workflow.png" alt="CORE-Cox workflow: source-cohort low-rank learning and target-cohort residual transfer" width="100%">
+</p>
+
+<p align="center"><em>Overview of the CORE-Cox framework.</em></p>
 
 See the [paper](https://arxiv.org/abs/2605.15633) for the full formulation, study design, and clinical-cohort results.
 
