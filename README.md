@@ -13,15 +13,14 @@ CORE-Cox (**CO**hort-shared **R**ank-r**E**duced Cox) transfers survival-risk in
 
 ## Contents
 
-- [Overview](#overview)
-- [Method](#method)
+- [Framework](#framework)
 - [Installation](#installation)
 - [Input data](#input-data)
 - [Quick start](#quick-start)
 - [Outputs](#outputs)
 - [Citation](#citation)
 
-## Overview
+## Framework
 
 Conventional Cox models may produce unstable risk estimates when applied to data-sparse cohorts with limited sample sizes or few observed events. Borrowing information from a larger, related cohort—and sharing information across related outcomes—can improve estimation in these settings. However, directly transferring a model may introduce bias when risk-factor effects differ between populations. CORE-Cox balances information sharing with cohort-specific adaptation through two complementary steps:
 
@@ -29,8 +28,6 @@ Conventional Cox models may produce unstable risk estimates when applied to data
 2. **Adapt across cohorts:** estimate a regularized correction that captures target-cohort-specific effects.
 
 The implementation supports multiple outcomes, outcome-specific missingness, right censoring, source-based feature standardization, risk-score prediction, and coefficient inspection.
-
-## Method
 
 For \(p\) predictors, \(K\) outcomes, and rank \(r\):
 
