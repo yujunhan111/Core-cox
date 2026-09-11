@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use CORE-Cox, please cite the associated paper."
+title: "CORE-Cox"
+type: software
+authors:
+  - family-names: Yu
+    given-names: Junhan
+  - family-names: Chen
+    given-names: Yurui
+  - family-names: Delgado-SanMartin
+    given-names: Juan
+  - family-names: Wang
+    given-names: Dennis
+  - family-names: Pan
+    given-names: Hong
+  - family-names: Zhou
+    given-names: Doudou
+license: MIT
+preferred-citation:
+  type: article
+  title: "Structured Transfer Learning for Survival Risk Stratification in Data-Sparse Clinical Cohorts"
+  authors:
+    - family-names: Yu
+      given-names: Junhan
+    - family-names: Chen
+      given-names: Yurui
+    - family-names: Delgado-SanMartin
+      given-names: Juan
+    - family-names: Wang
+      given-names: Dennis
+    - family-names: Pan
+      given-names: Hong
+    - family-names: Zhou
+      given-names: Doudou
+  year: 2026
+  journal: "arXiv"
+  url: "https://arxiv.org/abs/2605.15633"
